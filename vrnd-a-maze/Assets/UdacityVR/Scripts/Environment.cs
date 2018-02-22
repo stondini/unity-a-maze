@@ -31,14 +31,32 @@ public class Environment : MonoBehaviour {
         for (int i = 0; i < 6; i++)
         {
             // Left green
-            Instantiate(treePrefab, new Vector3(32f - (i * delta), 0, 120), rotation);
-            Instantiate(treePrefab, new Vector3(32f, 0, 123 + (i * delta)), rotation);
-            Instantiate(treePrefab, new Vector3(29f - (i * delta), 0, 138), rotation);
+            Instantiate(treePrefab, new Vector3(32f - (i * delta), 0f, 120f), rotation);
+            Instantiate(treePrefab, new Vector3(32f, 0f, 123f + (i * delta)), rotation);
+            Instantiate(treePrefab, new Vector3(29f - (i * delta), 0f, 138f), rotation);
 
             // Right green
-            Instantiate(treePrefab, new Vector3(-32f + (i * delta), 0, 120), rotation);
-            Instantiate(treePrefab, new Vector3(-32f, 0, 123 + (i * delta)), rotation);
-            Instantiate(treePrefab, new Vector3(-29f + (i * delta), 0, 138), rotation);
+            Instantiate(treePrefab, new Vector3(-32f + (i * delta), 0f, 120f), rotation);
+            Instantiate(treePrefab, new Vector3(-32f, 0f, 123f + (i * delta)), rotation);
+            Instantiate(treePrefab, new Vector3(-29f + (i * delta), 0f, 138f), rotation);
+        }
+
+        // The trees circle
+        int nbTrees = 32;
+        float centerX = -25f;
+        float centerZ = 0f;
+        float radius = 12.0f;
+        for (int i = 0; i < nbTrees; i++)
+        {
+            // Create the entry and exit
+            if ((i >= 11 && i <= 12) || (i >= 26 && i <= 27)) {
+                continue;
+            }
+            float angle = (i * 2f * Mathf.PI) / (float)nbTrees;
+            float x = centerX + (radius * Mathf.Cos(angle));
+            float z = centerZ + (radius * Mathf.Sin(angle));
+            Debug.Log("angle=" + angle + ", x=" + x + ", z=" + z);
+            Instantiate(treePrefab, new Vector3(x, 0f, z), rotation);
         }
     }
 
@@ -48,8 +66,8 @@ public class Environment : MonoBehaviour {
         float delta = 7.0f;
         for (int i = 0; i < 6; i++)
         {
-            Instantiate(pillarPrefab, new Vector3(-3.6f, 0, 24f + (i * delta)), rotation);
-            Instantiate(pillarPrefab, new Vector3(3.6f, 0, 24f + (i * delta)), rotation);
+            Instantiate(pillarPrefab, new Vector3(-3.6f, 0f, 24f + (i * delta)), rotation);
+            Instantiate(pillarPrefab, new Vector3(3.6f, 0f, 24f + (i * delta)), rotation);
         }
     }
 }
