@@ -50,8 +50,6 @@ public class Waypoint : MonoBehaviour
 	[Header("Hide Distance")]
 	public float threshold						= 0.125f;
 
-
-
 	void Awake()
 	{		
 		_material					= Instantiate(material);
@@ -115,6 +113,7 @@ public class Waypoint : MonoBehaviour
 	public void Enter()
 	{
 		_state = _state == State.Idle ? State.Focused : _state;
+        Debug.Log(_state);
 	}
 
 

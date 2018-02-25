@@ -8,11 +8,6 @@ public class Environment : MonoBehaviour {
 
     public GameObject pillarPrefab;
 
-    /*
-     * 
-     * 
-     */
-
 	void Start () {
         // Place trees
         PlaceTrees();
@@ -55,7 +50,6 @@ public class Environment : MonoBehaviour {
             float angle = (i * 2f * Mathf.PI) / (float)nbTrees;
             float x = centerX + (radius * Mathf.Cos(angle));
             float z = centerZ + (radius * Mathf.Sin(angle));
-            Debug.Log("angle=" + angle + ", x=" + x + ", z=" + z);
             Instantiate(treePrefab, new Vector3(x, 0f, z), rotation);
         }
     }
