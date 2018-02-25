@@ -113,7 +113,6 @@ public class Waypoint : MonoBehaviour
 	public void Enter()
 	{
 		_state = _state == State.Idle ? State.Focused : _state;
-        Debug.Log(_state);
 	}
 
 
