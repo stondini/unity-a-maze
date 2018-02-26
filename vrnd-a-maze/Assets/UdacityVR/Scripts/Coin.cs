@@ -41,7 +41,7 @@ public class Coin : MonoBehaviour
             {
                 text = text + "s";
             }
-            earnedCoinsText.GetComponent<TextMesh>().text = text;
+            earnedCoinsText.GetComponent<UnityEngine.UI.Text>().text = text;
         }
     }
 }
