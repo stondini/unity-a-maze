@@ -8,16 +8,23 @@ public class Environment : MonoBehaviour {
 
     public GameObject pillarPrefab;
 
+    public float nextStormTime;
+
 	void Start () {
         // Place trees
         PlaceTrees();
         // Place pillas
         PlacePillars();
+
+        nextStormTime = Time.fixedTime + Random.Range(16.0f, 60.0f); // From 16 seconds to 60 seconds
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Time.fixedTime >= nextStormTime) {
+            nextStormTime = Time.fixedTime + Random.Range(16.0f, 60.0f); // From 16 seconds to 60 seconds
+            gameObject.GetComponent<AudioSource>().Play();
+        }
 	}
 
     private void PlaceTrees() {

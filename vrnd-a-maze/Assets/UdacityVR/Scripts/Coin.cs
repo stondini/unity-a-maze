@@ -7,6 +7,8 @@ public class Coin : MonoBehaviour
     //Create a reference to the CoinPoofPrefab
     public GameObject coinPoofPrefab;
 
+    public AudioClip soundFile;
+
     private bool collected = false;
 
     void Update()
@@ -22,7 +24,9 @@ public class Coin : MonoBehaviour
 
             // Instantiate the CoinPoof Prefab where this coin is located
             // Make sure the poof animates vertically
-            Instantiate(coinPoofPrefab, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+            GameObject coinPoof = Instantiate(coinPoofPrefab, gameObject.transform.position, Quaternion.Euler(-90f, 0f, 0f));
+            coinPoof.GetComponent<AudioSource>().clip = soundFile;
+            coinPoof.GetComponent<AudioSource>().Play();
 
             // Destroy this coin. Check the Unity documentation on how to use Destroy
             Destroy(gameObject, 0.5f);
