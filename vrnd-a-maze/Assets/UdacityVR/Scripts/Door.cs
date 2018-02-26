@@ -16,9 +16,8 @@ public class Door : MonoBehaviour
 
     void Update() {
         // If the door is opening and it is not fully raised
-            // Animate the door raising up
+        // Animate the door raising up
         if (opening) {
-            //gameObject.GetC
             GameObject leftDoor = GameObject.Find("Left_Door");
             GameObject rightDoor = GameObject.Find("Right_Door");
 
@@ -32,12 +31,14 @@ public class Door : MonoBehaviour
     }
 
     public void OnDoorClicked() {
-        opening = true;
         // If the door is clicked and unlocked
         // Set the "opening" boolean to true
         if (!locked)
         {
             opening = true;
+            // Disable the BoxCollider to prevent ray casting after the door is open
+            // and allow entering into the temple.
+            gameObject.GetComponent<BoxCollider>().enabled = false;
         }
         else
         {

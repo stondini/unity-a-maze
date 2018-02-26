@@ -9,7 +9,11 @@ public class Coin : MonoBehaviour
 
     public AudioClip soundFile;
 
+    public GameObject earnedCoinsText;
+
     private bool collected = false;
+
+    private static int earnedCoins = 0;
 
     void Update()
     {
@@ -21,6 +25,7 @@ public class Coin : MonoBehaviour
         if (!collected)
         {
             collected = true; // To avoid multiple clicks and so earn more coins ;)
+            earnedCoins++;
 
             // Instantiate the CoinPoof Prefab where this coin is located
             // Make sure the poof animates vertically
@@ -30,6 +35,13 @@ public class Coin : MonoBehaviour
 
             // Destroy this coin. Check the Unity documentation on how to use Destroy
             Destroy(gameObject, 0.5f);
+
+            string text = earnedCoins + " Coin";
+            if (earnedCoins > 1)
+            {
+                text = text + "s";
+            }
+            earnedCoinsText.GetComponent<TextMesh>().text = text;
         }
     }
 }
