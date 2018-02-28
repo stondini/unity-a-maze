@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
     // Create a boolean value called "opening" that can be checked in Update() 
     private bool opening = false;
 
+    public AudioClip openingSoundFile;
+
     public AudioClip lockedSoundFile;
 
     private float startTime = 0f;
@@ -39,6 +41,8 @@ public class Door : MonoBehaviour
             // Disable the BoxCollider to prevent ray casting after the door is open
             // and allow entering into the temple.
             gameObject.GetComponent<BoxCollider>().enabled = false;
+            gameObject.GetComponent<AudioSource>().clip = openingSoundFile;
+            gameObject.GetComponent<AudioSource>().Play();
         }
         else
         {
