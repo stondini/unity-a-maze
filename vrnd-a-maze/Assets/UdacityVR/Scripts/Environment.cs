@@ -10,7 +10,11 @@ public class Environment : MonoBehaviour {
 
     public GameObject pillarSpotLightPrefab;
 
-    public float nextStormTime;
+    public GameObject lightningLight;
+
+    private float nextStormTime;
+
+    private bool startStorm;
 
 	void Start () {
         // Place trees
@@ -18,16 +22,50 @@ public class Environment : MonoBehaviour {
         // Place pillas
         PlacePillars();
 
-        nextStormTime = Time.fixedTime + Random.Range(16.0f, 60.0f); // From 16 seconds to 60 seconds
+        startStorm = false;
+        nextStormTime = Time.fixedTime + Random.Range(3.0f, 10.0f); // From 16 seconds to 60 seconds
+        StartCoroutine(StartStormSound());
+        StartCoroutine(StartStormLightning());
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (Time.fixedTime >= nextStormTime) {
+            startStorm = true;
             nextStormTime = Time.fixedTime + Random.Range(16.0f, 60.0f); // From 16 seconds to 60 seconds
-            gameObject.GetComponent<AudioSource>().Play();
         }
 	}
+
+    private IEnumerator StartStormSound()
+    {
+        while (true) {
+            if (startStorm)
+            {
+                gameObject.GetComponent<AudioSource>().Play();
+                yield return new WaitForSeconds(gameObject.GetComponent<AudioSource>().clip.length);
+                startStorm = false;
+            }
+            yield return null;
+        }
+    }
+
+    private IEnumerator StartStormLightning()
+    {
+        bool enable = true;
+        float waitRnd = 0;
+        while (true)
+        {
+            if (startStorm)
+            {
+                lightningLight.GetComponent<Light>().enabled = enable;
+                yield return new WaitForSeconds(waitRnd);
+                waitRnd = Random.Range(0.1f, 1f);
+                enable = !enable;
+            }
+            yield return null;
+        }
+    }
+        
 
     private void PlaceTrees() {
         Quaternion rotation = Quaternion.Euler(-90.0f, 0f, 0f);
