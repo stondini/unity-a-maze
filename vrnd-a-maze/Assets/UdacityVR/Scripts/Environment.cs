@@ -8,6 +8,8 @@ public class Environment : MonoBehaviour {
 
     public GameObject pillarPrefab;
 
+    public GameObject pillarSpotLightPrefab;
+
     public float nextStormTime;
 
 	void Start () {
@@ -69,6 +71,9 @@ public class Environment : MonoBehaviour {
         {
             Instantiate(pillarPrefab, new Vector3(-3.6f, 0f, 24f + (i * delta)), rotation);
             Instantiate(pillarPrefab, new Vector3(3.6f, 0f, 24f + (i * delta)), rotation);
+
+            Instantiate(pillarSpotLightPrefab, new Vector3(-3.6f, 0f, 27.5f + (i * delta)), rotation);
+            Instantiate(pillarSpotLightPrefab, new Vector3(3.6f, 0f, 27.5f + (i * delta)), rotation);
         }
     }
 }
