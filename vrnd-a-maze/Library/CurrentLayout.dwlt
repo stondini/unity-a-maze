@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 342}
   m_MaxSize: {x: 16012, y: 8042}
   vertical: 0
-  controlID: 81
+  controlID: 56
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 342}
   m_MaxSize: {x: 12010, y: 8042}
   vertical: 1
-  controlID: 82
+  controlID: 57
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 83
+  controlID: 58
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -200,7 +200,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 209
     y: 0
-    width: 536
+    width: 503
     height: 660
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 745
+    x: 712
     y: 0
-    width: 523
+    width: 556
     height: 660
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -263,7 +263,7 @@ MonoBehaviour:
   - {fileID: 20}
   - {fileID: 21}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 2
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -313,9 +313,9 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 2
-    y: 19
-    width: 519
+    x: 758
+    y: 93
+    width: 552
     height: 639
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -325,8 +325,8 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -259.5
-    m_HBaseRangeMax: 259.5
+    m_HBaseRangeMin: -276
+    m_HBaseRangeMax: 276
     m_VBaseRangeMin: -311
     m_VBaseRangeMax: 311
     m_HAllowExceedBaseRangeMin: 1
@@ -345,25 +345,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 519
+      width: 552
       height: 622
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 259.5, y: 311}
+    m_Translation: {x: 276, y: 311}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -259.5
+      x: -276
       y: -311
-      width: 519
+      width: 552
       height: 622
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1038, y: 1278}
+  m_LastWindowPixelSize: {x: 1104, y: 1278}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -389,15 +389,15 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 19
+    x: 44
+    y: 93
     width: 207
     height: 639
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4f2ffff
-    m_LastClickedID: -3340
-    m_ExpandedIDs: a6fbffff00000000de2d00004e2e0000
+    m_SelectedIDs: 0a6b0300
+    m_LastClickedID: 224010
+    m_ExpandedIDs: 4e6df7ff066ef7ff6e6ff7ff8ce3f8ffe4e4f8ff4ae6f8ff16f3f8ff8af4f8fff2f5f8ffa6fbffff00000000de2d00004e2e00004c350000d0370200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -444,17 +444,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 255
     y: 93
-    width: 532
+    width: 499
     height: 639
   m_SceneLighting: 0
-  lastFramingTime: 52.048357009887695
+  lastFramingTime: 3208.12861096859
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -12, y: 13.150002, z: 120}
+    m_Target: {x: 0, y: 4, z: 128}
     speed: 2
-    m_Value: {x: -12, y: 13.150002, z: 120}
+    m_Value: {x: 0, y: 4, z: 128}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -477,13 +477,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.00054132886, y: 0.99164367, z: -0.12894887, w: -0.0041641844}
+    m_Target: {x: 0.00032622277, y: 0.98351896, z: -0.18081035, w: 0.0017705824}
     speed: 2
-    m_Value: {x: -0.00054132816, y: 0.99164236, z: -0.1289487, w: -0.004164179}
+    m_Value: {x: 0.00032622195, y: 0.9835165, z: -0.1808099, w: 0.001770578}
   m_Size:
-    m_Target: 21.43729
+    m_Target: 6.39236
     speed: 2
-    m_Value: 21.43729
+    m_Value: 6.39236
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,19 +601,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/UdacityVR/Sounds
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UdacityVR/Sounds
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/sto/Documents/Cours/Udacity/VR Developer/Projects/unity-a-maze/vrnd-a-maze
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 34}
-    m_SelectedIDs: 62280000
-    m_LastClickedID: 10338
-    m_ExpandedIDs: 00000000082800006e2800007a280000e828000012290000182900008e29000060390000
+    m_SelectedIDs: 08280000
+    m_LastClickedID: 10248
+    m_ExpandedIDs: 00000000082800006e2800007a280000e828000012290000182900008e2900006039000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -666,10 +666,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a2290000
-    m_LastClickedInstanceID: 10658
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000d02b00009c3000001ea6fcff5a44faffe23100004e2a0000bc270000ba2a0000bc2800002237faffd227000072290000
+    m_ExpandedInstanceIDs: c6230000d02b00009c3000001ea6fcff5a44faffe23100004e2a0000bc270000ba2a0000bc2800002237faffd2270000722900003229000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -745,9 +745,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 44
-    y: 752
-    width: 824
-    height: 276
+    y: 753
+    width: 1266
+    height: 275
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
@@ -822,16 +822,16 @@ MonoBehaviour:
       splitSize: 6
       xOffset: 0
     m_HorizontalSplitter:
-      ID: 620
+      ID: 118
       splitterInitialOffset: 0
       currentActiveSplitter: -1
-      realSizes: f700000042020000
+      realSizes: 7c01000077030000
       relativeSizes:
       - 0.3
       - 0.7
       minSizes: a0000000a0000000
       maxSizes: 0000000000000000
-      lastTotalSize: 825
+      lastTotalSize: 1267
       splitSize: 6
       xOffset: -1
   m_SectionOrder: 00000000030000000100000002000000

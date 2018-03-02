@@ -111,3 +111,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPoofPrefab: {fileID: 0}
   soundFile: {fileID: 8300000, guid: bc60b8ac1c02246fbb646be110722ceb, type: 3}
+  earnedCoinsText: {fileID: 0}
