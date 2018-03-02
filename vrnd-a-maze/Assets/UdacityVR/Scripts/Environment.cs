@@ -16,6 +16,10 @@ public class Environment : MonoBehaviour {
 
     private bool startStorm;
 
+    private int maxLightnings = 9;
+
+    private int lightningCount = 0;
+
 	void Start () {
         // Place trees
         PlaceTrees();
@@ -31,6 +35,7 @@ public class Environment : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Time.fixedTime >= nextStormTime) {
+            lightningCount = 0;
             startStorm = true;
             nextStormTime = Time.fixedTime + Random.Range(16.0f, 60.0f); // From 16 seconds to 60 seconds
         }
@@ -57,10 +62,25 @@ public class Environment : MonoBehaviour {
         {
             if (startStorm)
             {
-                lightningLight.GetComponent<Light>().enabled = enable;
-                yield return new WaitForSeconds(waitRnd);
-                waitRnd = Random.Range(0.1f, 1f);
-                enable = !enable;
+                Light lightning = lightningLight.GetComponent<Light>();
+                while (lightningCount <= maxLightnings)
+                {
+                    if (enable)
+                    {
+                        // Random lightning intensity
+                        lightning.intensity = Random.Range(1f, 10f);
+                        waitRnd = Random.Range(0.05f, 0.1f);
+                    }
+                    else
+                    {
+                        waitRnd = Random.Range(0.05f, 0.8f);
+                    }
+                    lightning.enabled = enable;
+                    yield return new WaitForSeconds(waitRnd);
+
+                    enable = !enable;
+                    lightningCount++;
+                }
             }
             yield return null;
         }
