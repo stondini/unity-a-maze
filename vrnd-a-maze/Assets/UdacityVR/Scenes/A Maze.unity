@@ -8644,6 +8644,7 @@ GameObject:
   - component: {fileID: 431478490}
   - component: {fileID: 431478492}
   - component: {fileID: 431478491}
+  - component: {fileID: 431478493}
   m_Layer: 0
   m_Name: The_Temple
   m_TagString: Untagged
@@ -8707,6 +8708,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 431478489}
   m_Mesh: {fileID: 4300002, guid: 8262c07f707ae224ea79a82d92a83bd9, type: 3}
+--- !u!65 &431478493
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431478489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.21200004, z: 0.24600008}
+  m_Center: {x: 0.17, y: 0.000000019073486, z: 0.122999996}
 --- !u!1 &439877605
 GameObject:
   m_ObjectHideFlags: 0
@@ -26535,7 +26548,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 128
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 2}
       propertyPath: m_LocalRotation.x

@@ -9,6 +9,7 @@ This project is part of [Udacity](https://www.udacity.com "Udacity - Be in deman
 ## Notes
 - I changed constant RETICLE_DISTANCE_MAX from 10 to 20 in GvrReticlePointer.
 - Storm and Lightning are Coroutines.
+- According to the review, I first added a box collider around the temple but the door was not working anymore. So I just placed the collider at the back of the temple. Is there another way to fix this ?
 
 ## Credit / Special Thanks
 - Thunder Sound Set Vol1 v1.1 (http://www.thunderpopproductions.com)
