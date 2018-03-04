@@ -10,9 +10,11 @@ public class Door : MonoBehaviour
     // Create a boolean value called "opening" that can be checked in Update() 
     private bool opening = false;
 
-    public AudioClip openingSoundFile;
+    [SerializeField]
+    private AudioClip openingSoundFile;
 
-    public AudioClip lockedSoundFile;
+    [SerializeField]
+    private AudioClip lockedSoundFile;
 
     private float startTime = 0f;
 
